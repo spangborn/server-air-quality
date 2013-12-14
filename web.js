@@ -8,7 +8,7 @@ var airQuality = {
   "api" : {
     "host" : "www.airnowapi.org",
     "endpoint" : "/aq/observation/latLong/current/?format=application/json",
-    "apiKey" : ""
+    "apiKey" : process.env.API_KEY
   }
 };
 
@@ -52,5 +52,5 @@ app.get('/', function(request, response) {
 
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
-  console.log("Listening on " + port);
+  console.log("Listening on " + port + " API KEY: " + process.env.API_KEY);
 });
