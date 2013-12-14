@@ -16,8 +16,6 @@ function getAirQuality(req,res) {
   var url_parts = url.parse(req.url, true);
   var query = url_parts.query;
   
-  console.log(query);
-  
   // Send the HTTP request to AirNow  
   var options = {
     "host" : airQuality.api.host,
