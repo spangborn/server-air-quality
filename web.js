@@ -46,7 +46,7 @@ function getAirQuality(req,res) {
 
 app.use(express.logger());
 
-app.get('/', function(request, response) {
+app.get('/getAirQuality', function(request, response) {
   getAirQuality(request, response);
 });
 
