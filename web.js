@@ -44,10 +44,12 @@ function getAirQuality(req,res) {
 
 app.use(express.logger());
 
-app.get('/getAirQuality', function(request, response) {
+app.get('/getAirQuality', function (request, response) {
   getAirQuality(request, response);
 });
-
+app.get('/', function (request, response) {
+	response.end("You should get a Pebble. -s");
+});
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
   console.log("Listening on " + port + " API KEY: " + process.env.API_KEY);
